@@ -1,4 +1,4 @@
-package edu.agh.ics.jtplab;
+package edu.agh.ics.lab1;
 
 public class HelloWorld {
     public static void main(String[] args) {

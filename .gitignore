@@ -1,4 +1,8 @@
 .DS_Store
 .idea/
 *.iml
+!jtp1-1.iml
 out/
+out.txt
+person.ser
+jtp1.log
