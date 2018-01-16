@@ -1,20 +1,33 @@
 package edu.agh.ics.lab2;
-
 import org.apache.log4j.Logger;
 
-import java.util.Random;
-
 public class Primes {
-
-    private static Logger log = Logger.getLogger(ArrayExperiments.class);
-
-    private static int[] generateArray(int size) {
+    public static Logger log = Logger.getLogger(Primes.class);
+    public static void main(String[] args) {
+        int size = 1024;
         int[] tmp = new int[size];
-        Random rand = new Random();
-        for (int i = 0; i < tmp.length; i++) {
-            tmp[i] = rand.nextInt() + 1;
+        for (int j=0;j<size;j++) {
+            tmp[j]=0;
         }
+        for(int i = 0;i<size;i++){
+            if (i == 0){
+                continue;
+            }
+            if (i == 1){
+                continue;
+            }
+            else{
+                if(tmp[i]==0){
+                    log.info(i);
+                    tmp[i]=1;
+                    int pom = i;
+                    while(pom<size){
+                        tmp[pom] = 1;
+                        pom = pom+i;
+                    }
+                }
 
-        return tmp;
+            }
+        }
     }
 }
